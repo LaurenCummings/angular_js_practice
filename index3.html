@@ -6,6 +6,15 @@
 		[ng\:cloak], [ng-cloak], .ng-cloak {
 			display: none;
 		}
+
+		.blueText {
+			color: blue;
+		}
+
+		.boldText {
+			font-weight: bold;
+		}
+
 		</style>
 
 	</head>
@@ -72,6 +81,16 @@
 			<p>
 				<input type="checkbox" ng-model="disableButton">DisableButton</button>
 			</p>
+
+			<p>
+				<select ng-model="textStyling">
+					<option value="blueText">Blue Text</option>
+					<option value="boldText">Bold Text</option>
+				</select>
+
+			</p>
+
+			<p ng-class="textStyling">Some Random Text</p>
 
 		</div>
 
