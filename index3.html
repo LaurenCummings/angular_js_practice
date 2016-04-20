@@ -42,6 +42,16 @@
 			<label>Change 1st Item : </label>
 			<input ng-model="groceries[0].item" />
 
+			<h3>Grocery List</h3>
+			<div ng-include="'groceryList.html'"></div>
+
+			<label>
+			<input type="checkbox" ng-model="showList">
+			Show Unordered List
+			</label>
+
+			<ng-include src="getList()"></ng-include>
+
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>

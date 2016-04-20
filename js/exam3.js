@@ -8,4 +8,8 @@ app3.controller('gListCtrl', function($scope) {
 		{item: "Bread", purchased: false},
 		{item: "Hummas", purchased: false}
 	];
+
+	$scope.getList = function() {
+		return $scope.showList ? "ulGroceryList.html" : "groceryList.html"
+	};
 });
