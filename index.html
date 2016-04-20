@@ -2,10 +2,34 @@
 <html ng-app="app1" ng-init="person = {fName: 'Derek', lName: 'Banas'}; capitals = [{city: 'Montgomery', state: 'Alabama'}, {city: 'Juneau', state: 'Alaska'}, {city: 'Phoenix', state: 'Arizona'}]">
 	<head>
 		<title>AngularJS Tutorial</title>
+
+		<style>
+
+			.stripedblue {
+				color:#007FFF;
+				background-color:#DBE9F4;
+			}
+
+			.stripedbeige {
+				color:#CC0000;
+				background-color:#F5F5DC;
+			}
+
+		</style>
 	</head>
 </html>
 
 	<body>
+
+		<table>
+			<tr ng-repeat="item in capitals"
+			ng-class-even="'stripedblue'"
+			ng-class-odd="'stripedbeige'">
+				<td>{{item.city}}</td>
+				<td>{{item.state}}</td>
+			</tr>
+		</table>
+
 		<div ng-controller="ctrl1">
 
 			<span>Values:</span>
