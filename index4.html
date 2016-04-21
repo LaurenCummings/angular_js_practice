@@ -52,6 +52,29 @@
 
 		</div>		
 
+		<div ng-controller="userCtrl">
+			<form name="userForm" ng-submit="saveUser(userInfo)">
+
+				<label>First Name: </label>
+				<input type="text" name="fname" ng-model="userInfo.fName" ng-required="true" ng-minlength="2" />
+
+				<span class="error-message" ng-show="userForm.fName.$dirty && userForm.fName.$error.required">Must Enter a First Name</span>
+
+				<span class="error-message" ng-show="userForm.fName.$dirty && userForm.fName.$error.minLength">Must be a Minimum of 2 Characters</span>
+
+				<br><br>
+
+				<label>Last Name: </label>
+				<input type="text" name="lname" ng-model="userInfo.lName" ng-required="true" ng-minlength="2" />
+
+				<span class="error-message" ng-show="userForm.lName.$dirty && userForm.lName.$error.required">Must Enter a Last Name</span>
+
+				<span class="error-message" ng-show="userForm.lName.$dirty && userForm.lName.$error.minLength">Must be a Minimum of 2 Characters</span>
+
+				<br><br>
+
+			</form>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		<script src="js/exam4.js"></script>
 	</body>
