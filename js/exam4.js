@@ -25,6 +25,7 @@ app4.controller('userCtrl', function($scope) {
 	$scope.user = [{
 		fName: "Lauren",
 		lName: "Cummings",
+		street: "123 Main St.",
 		subscribe: "Subscribe",
 		delivery: "Email"
 	}];
