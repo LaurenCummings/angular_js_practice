@@ -79,6 +79,28 @@
 
 				<span class="error-message" ng-show="userForm.street.$dirty && userForm.street.$invalid">Must Enter a Number, Street, and Street Type (ex: 123 Main St.)</span>
 
+				<label>Subscribe:</label>
+
+				<input type="checkbox" name="subscribe" ng-model="userInfo.subscribe" ng-true-value="'Subscribe'" ng-false-value="'Don\'t Subscribe'" />
+
+				<br><br>
+
+				<label>Delivery Method:</label>
+				<select name="delivery" ng-model="userInfo.delivery" ng-required="true">
+					<option value="Email">Email</option>
+					<option value="Mail">Mail</option>
+				</select>
+
+				<br><br>
+
+				<input type="submit" value="Save" ng-disabled="userForm.$invalid" />
+
+				<ul>
+					<li ng-repeat="item in user">
+						{{ 'User: ' + item.fName + " " + item.lName + " " + item.street + " " + item.subscribe + " " + item.delivery}}
+					</li>
+				</ul>
+
 			</form>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
