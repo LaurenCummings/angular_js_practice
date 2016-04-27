@@ -73,6 +73,12 @@
 
 				<br><br>
 
+				<label>Street:</label>
+
+				<input type="text" name="street" ng-model="userInfo.street" ng-required="true" ng-minlength="6" />
+
+				<span class="error-message" ng-show="userForm.street.$dirty && userForm.street.$invalid">Must Enter a Number, Street, and Street Type (ex: 123 Main St.)</span>
+
 			</form>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
