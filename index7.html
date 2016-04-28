@@ -49,6 +49,19 @@
 			<p>No Fractions : {{numVal | number:0}}</p>
 			<p>Negative 4 Decimal : {{-numVal | number:4}}</p>
 
+			<p>Date 1 : {{currDate | date: 'medium'}}</p>
+			<p>Date 2 : {{currDate | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+
+			<p>Default : {{randomStr}}</p>
+			<p>10 Characters : {{randomStr | limitTo:10}}</p>
+			<p>
+				<ul>
+					<li ng-repeat="item in randArray | limitTo:3">
+						{{item}}
+					</li>
+				</ul>
+			</p>
+
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
