@@ -62,9 +62,18 @@
 				</ul>
 			</p>
 
+			<p>
+				<ul>
+					<li ng-repeat="item in weather">
+						{{item.day + " : "}} {{item.rain | raining}}
+					</li>
+				</ul>
+			</p>
+
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		<script src="js/exam7.js"></script>
+		<script src="js/filters.js"></script>
 	</body>
 </html>

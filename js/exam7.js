@@ -1,4 +1,4 @@
-var app7 = angular.module('app7', []);
+var app7 = angular.module('app7', ['weatherFilters']);
 
 app7.controller('mainCtrl', function($scope) {
 
@@ -28,6 +28,11 @@ app7.controller('mainCtrl', function($scope) {
 		"Bread",
 		"Pickles",
 		"Raisins"
+	];
+
+	$scope.weather = [
+		{day: "Monday", rain: false},
+		{day: "Tuesday", rain: true}
 	];
 
 });
