@@ -26,6 +26,13 @@ angular.module('app8', [])
 			angular.element(document.querySelector('#barrysNumber')).text(barrysNum);
 
 			angular.element(document.querySelector('#hank')).removeClass("thick");
+
+			var isHankBold = 
+			angular.element(document.querySelector('#hank')).hasClass("thick");
+
+			angular.element(document.querySelector('#hankBold')).text(isHankBold);
+
+			
 		}
 	}
 })
