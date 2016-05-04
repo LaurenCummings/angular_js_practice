@@ -42,4 +42,8 @@ angular.module('app8', [])
 
 .controller("mainCtrl", function($scope) {
 
+	$scope.unBold = function() {
+		angular.element(document.querySelector('#hank')).toggleClass("thick");
+	}
+
 })
