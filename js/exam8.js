@@ -12,10 +12,17 @@ angular.module('app8', [])
 
 				players.eq(i).attr("number", "25");
 			}
+
+			if(players.eq(i).text() == "Hank Aaron"){
+				players.eq(i).addClass("thick");
+			}
+			listOfPlayers += players.eq(i).text() + ",";
+
+			angular.element(document.querySelector('#childrenList')).text(listOfPlayers);
 		}
 	}
 })
 
 .controller("mainCtrl", function($scope) {
-	
+
 })
