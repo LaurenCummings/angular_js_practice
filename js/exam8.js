@@ -19,6 +19,13 @@ angular.module('app8', [])
 			listOfPlayers += players.eq(i).text() + ",";
 
 			angular.element(document.querySelector('#childrenList')).text(listOfPlayers);
+
+			var barrysNum = 
+			angular.element(document.querySelector('#barry')).attr("number");
+
+			angular.element(document.querySelector('#barrysNumber')).text(barrysNum);
+
+			angular.element(document.querySelector('#hank')).removeClass("thick");
 		}
 	}
 })
