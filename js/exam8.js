@@ -32,7 +32,10 @@ angular.module('app8', [])
 
 			angular.element(document.querySelector('#hankBold')).text(isHankBold);
 
-			
+			var barryID = 
+			angular.element(document.querySelector('#barry')).prop("id");
+
+			angular.element(document.querySelector('#barryID')).text(barryID);
 		}
 	}
 })
