@@ -1,6 +1,22 @@
 angular.module('app9', [])
 	.directive("bbPlayerList", function() {
 
+		return function(scope, element, attrs){
+			var data = scope[attrs["bbPlayerList"]];
+
+			if (angular.isArray(data)){
+				var arrayItem = attrs["arrayItem"];
+
+				var listElem = angular.element("<ul>");
+
+				element.append(listElem);
+
+				for(var i = 0; i < data.length; i++){
+					listElem.append(angular.element('<li>').text(scope.$eval(arrayItem, data[i])));
+				}
+			}
+		}
+
 	})
 	.controller("mainCtrl", function($scope) {
 		$scope.bbPlayers = [
