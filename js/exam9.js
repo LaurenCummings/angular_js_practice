@@ -14,6 +14,14 @@ angular.module('app9', [])
 				for(var i = 0; i < data.length; i++){
 					listElem.append(angular.element('<li>').text(scope.$eval(arrayItem, data[i])));
 				}
+
+				listElem.after(angular.element("<span id='mays'>").text("Willy Mays"));
+
+				listElem.prepend(angular.element("<span id='cobb'>").text("Ty Cobb"));
+
+				// angular.element(document.querySelector('#mays')).remove();
+
+
 			}
 		}
 
