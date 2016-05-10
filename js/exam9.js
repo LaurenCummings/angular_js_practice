@@ -19,7 +19,14 @@ angular.module('app9', [])
 
 				listElem.prepend(angular.element("<span id='cobb'>").text("Ty Cobb"));
 
-				// angular.element(document.querySelector('#mays')).remove();
+				angular.element(document.querySelector('#mays')).remove();
+
+				var gehrigHTML = "<span id='gehrig'>Lou Gehrig</span>";
+
+				var replacement = 
+				angular.element(gehrigHTML);
+
+				angular.element(document.querySelector('#cobb')).replaceWith(replacement);
 
 
 			}
